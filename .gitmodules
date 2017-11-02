@@ -1,0 +1,6 @@
+[submodule "phenotype-schema"]
+	path = phenotype-schema
+	url = https://github.com/biostream/phenotype-schema.git
+[submodule "ga4gh-schemas"]
+	path = ga4gh-schemas
+	url = https://github.com/ga4gh/ga4gh-schemas.git
