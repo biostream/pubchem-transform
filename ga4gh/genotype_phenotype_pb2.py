@@ -24,6 +24,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   serialized_pb=_b('\n\x1ega4gh/genotype_phenotype.proto\x12\x05ga4gh\x1a\x12ga4gh/common.proto\x1a\x1cgoogle/protobuf/struct.proto\"\xc8\x01\n\x17PhenotypeAssociationSet\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\ndataset_id\x18\x03 \x01(\t\x12\x36\n\x04info\x18\x04 \x03(\x0b\x32(.ga4gh.PhenotypeAssociationSet.InfoEntry\x1aG\n\tInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12)\n\x05value\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.ListValue:\x02\x38\x01\"f\n\x14\x45nvironmentalContext\x12\n\n\x02id\x18\x01 \x01(\t\x12-\n\x10\x65nvironment_type\x18\x02 \x01(\x0b\x32\x13.ga4gh.OntologyTerm\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"\xa5\x02\n\x11PhenotypeInstance\x12\n\n\x02id\x18\x01 \x01(\t\x12!\n\x04type\x18\x02 \x01(\x0b\x32\x13.ga4gh.OntologyTerm\x12&\n\tqualifier\x18\x03 \x03(\x0b\x32\x13.ga4gh.OntologyTerm\x12)\n\x0c\x61ge_of_onset\x18\x04 \x01(\x0b\x32\x13.ga4gh.OntologyTerm\x12\x13\n\x0b\x64\x65scription\x18\x05 \x01(\t\x12\x30\n\x04info\x18\x06 \x03(\x0b\x32\".ga4gh.PhenotypeInstance.InfoEntry\x1aG\n\tInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12)\n\x05value\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.ListValue:\x02\x38\x01\"\xbd\x01\n\x08\x45vidence\x12*\n\revidence_type\x18\x01 \x01(\x0b\x32\x13.ga4gh.OntologyTerm\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\'\n\x04info\x18\x03 \x03(\x0b\x32\x19.ga4gh.Evidence.InfoEntry\x1aG\n\tInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12)\n\x05value\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.ListValue:\x02\x38\x01\"\x8b\x03\n\x1b\x46\x65\x61turePhenotypeAssociation\x12\n\n\x02id\x18\x01 \x01(\t\x12$\n\x1cphenotype_association_set_id\x18\x02 \x01(\t\x12\x13\n\x0b\x66\x65\x61ture_ids\x18\x03 \x03(\t\x12!\n\x08\x65vidence\x18\x04 \x03(\x0b\x32\x0f.ga4gh.Evidence\x12+\n\tphenotype\x18\x05 \x01(\x0b\x32\x18.ga4gh.PhenotypeInstance\x12\x13\n\x0b\x64\x65scription\x18\x06 \x01(\t\x12;\n\x16\x65nvironmental_contexts\x18\x07 \x03(\x0b\x32\x1b.ga4gh.EnvironmentalContext\x12:\n\x04info\x18\x08 \x03(\x0b\x32,.ga4gh.FeaturePhenotypeAssociation.InfoEntry\x1aG\n\tInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12)\n\x05value\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.ListValue:\x02\x38\x01\x62\x06proto3')
   ,
   dependencies=[ga4gh_dot_common__pb2.DESCRIPTOR,google_dot_protobuf_dot_struct__pb2.DESCRIPTOR,])
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -488,7 +489,6 @@ DESCRIPTOR.message_types_by_name['EnvironmentalContext'] = _ENVIRONMENTALCONTEXT
 DESCRIPTOR.message_types_by_name['PhenotypeInstance'] = _PHENOTYPEINSTANCE
 DESCRIPTOR.message_types_by_name['Evidence'] = _EVIDENCE
 DESCRIPTOR.message_types_by_name['FeaturePhenotypeAssociation'] = _FEATUREPHENOTYPEASSOCIATION
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 PhenotypeAssociationSet = _reflection.GeneratedProtocolMessageType('PhenotypeAssociationSet', (_message.Message,), dict(
 
