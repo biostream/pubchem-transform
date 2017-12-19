@@ -13,14 +13,17 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+from ga4gh import genotype_phenotype_pb2 as ga4gh_dot_genotype__phenotype__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='phenotype.proto',
   package='bmeg',
   syntax='proto3',
-  serialized_pb=_b('\n\x0fphenotype.proto\x12\x04\x62meg\"|\n\x14PhenotypeAssociation\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0b\n\x03gid\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x13\n\x0bhasGenotype\x18\x04 \x03(\t\x12\x14\n\x0chasPhenotype\x18\x05 \x03(\t\x12\x12\n\nhasContext\x18\x06 \x03(\t\"W\n\tPhenotype\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0b\n\x03gid\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x0e\n\x06isType\x18\x04 \x03(\t\x12\x13\n\x0b\x64\x65scription\x18\x05 \x01(\t\"\xc3\x01\n\x10GeneOntologyTerm\x12\n\n\x02id\x18\x01 \x01(\t\x12\x11\n\tnamespace\x18\x02 \x01(\t\x12\x0b\n\x03\x64\x65\x66\x18\x03 \x01(\t\x12\x0f\n\x07\x63omment\x18\x04 \x01(\t\x12\x0f\n\x07synonym\x18\x05 \x01(\t\x12\x0c\n\x04is_a\x18\x06 \x03(\t\x12\x0e\n\x06\x61lt_id\x18\x07 \x03(\t\x12\x0e\n\x06subset\x18\x08 \x03(\t\x12\x0c\n\x04xref\x18\t \x03(\t\x12\x13\n\x0bis_obsolete\x18\n \x01(\x08\x12\x10\n\x08\x63onsider\x18\x0b \x03(\t\"\x94\x01\n\x08\x45vidence\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0b\n\x03gid\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x0c\n\x04pmid\x18\x04 \x03(\t\x12&\n\x04info\x18\x05 \x03(\x0b\x32\x18.bmeg.Evidence.InfoEntry\x1a+\n\tInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xe2\x04\n\x08\x43ompound\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0b\n\x03gid\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x0e\n\x06target\x18\x05 \x01(\t\x12\x0e\n\x06report\x18\x06 \x01(\t\x12\x0e\n\x06status\x18\x07 \x01(\t\x12\x11\n\trationale\x18\x08 \x01(\t\x12\x0e\n\x06smiles\x18\t \x01(\t\x12\x0e\n\x06source\x18\x0c \x01(\t\x12\x12\n\npubchemcid\x18\r \x01(\t\x12\x12\n\npubchemsid\x18\x0e \x01(\t\x12\x10\n\x08toxicity\x18\x0f \x01(\t\x12\x11\n\tbioassays\x18\x10 \x01(\t\x12\x0f\n\x07\x64rug_id\x18\x11 \x01(\t\x12\x10\n\x08\x63hebi_id\x18\x12 \x01(\t\x12\x17\n\x0f\x62iological_role\x18\x13 \x01(\t\x12\x1c\n\x14\x62iological_role_info\x18\x14 \x01(\t\x12\x13\n\x0b\x61pplication\x18\x15 \x01(\t\x12\x18\n\x10\x61pplication_info\x18\x16 \x01(\t\x12\x13\n\x0bpubchemtype\x18\x17 \x01(\t\x12\x14\n\x0c\x66\x64\x61_approved\x18\x18 \x01(\t\x12\x19\n\x11\x66\x64\x61_approved_date\x18\x19 \x01(\t\x12\x17\n\x0f\x66\x64\x61_data_origin\x18\x1a \x01(\t\x12\"\n\x1a\x66ield_of_fda_approval_from\x18\x1b \x01(\t\x12\x10\n\x08synonyms\x18\n \x03(\t\x12&\n\x04info\x18\x0b \x03(\x0b\x32\x18.bmeg.Compound.InfoEntry\x1a+\n\tInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\".\n\x0c\x44oseResponse\x12\x0c\n\x04\x64ose\x18\x01 \x01(\x01\x12\x10\n\x08response\x18\x02 \x01(\x01\"\xd3\x01\n\x0fResponseSummary\x12/\n\x04type\x18\x01 \x01(\x0e\x32!.bmeg.ResponseSummary.SummaryType\x12\r\n\x05value\x18\x02 \x01(\x01\x12\x0c\n\x04unit\x18\x03 \x01(\t\"r\n\x0bSummaryType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x08\n\x04\x45\x43\x35\x30\x10\x01\x12\x08\n\x04IC50\x10\x02\x12\x08\n\x04LD50\x10\x03\x12\x08\n\x04GR50\x10\x04\x12\x08\n\x04\x41MAX\x10\x05\x12\x07\n\x03\x41UC\x10\x06\x12\x11\n\rACTIVITY_AREA\x10\x07\x12\x08\n\x04RMSE\x10\x08\"\xb3\x02\n\rResponseCurve\x12\x0b\n\x03gid\x18\x01 \x01(\t\x12\x36\n\x0cresponseType\x18\x02 \x01(\x0e\x32 .bmeg.ResponseCurve.ResponseType\x12\"\n\x06values\x18\x03 \x03(\x0b\x32\x12.bmeg.DoseResponse\x12\x16\n\x0egrowthStandard\x18\x04 \x01(\x01\x12\x10\n\x08\x63ompound\x18\x05 \x01(\t\x12\x0e\n\x06sample\x18\x06 \x01(\t\x12&\n\x07summary\x18\x07 \x03(\x0b\x32\x15.bmeg.ResponseSummary\x12\x10\n\x08\x63ontrols\x18\x08 \x03(\x01\x12\x0e\n\x06\x62lanks\x18\t \x03(\x01\"5\n\x0cResponseType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06GROWTH\x10\x01\x12\x0c\n\x08\x41\x43TIVITY\x10\x02\x62\x06proto3')
-)
+  serialized_pb=_b('\n\x0fphenotype.proto\x12\x04\x62meg\x1a\x1ega4gh/genotype_phenotype.proto\"\xa2\x02\n\tPredictor\x12\n\n\x02id\x18\x01 \x01(\t\x12+\n\tphenotype\x18\x03 \x01(\x0b\x32\x18.ga4gh.PhenotypeInstance\x12\x10\n\x08genotype\x18\x04 \x01(\t\x12;\n\x16\x65nvironmental_contexts\x18\x05 \x03(\x0b\x32\x1b.ga4gh.EnvironmentalContext\x12\x10\n\x08model_id\x18\x06 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x07 \x01(\t\x12\x33\n\nbackground\x18\x08 \x03(\x0b\x32\x1f.bmeg.Predictor.BackgroundEntry\x1a\x31\n\x0f\x42\x61\x63kgroundEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01:\x02\x38\x01\"N\n\x14PredictorAssociation\x12\x14\n\x0cpredictor_id\x18\x01 \x01(\t\x12\x11\n\tsample_id\x18\x02 \x01(\t\x12\r\n\x05value\x18\x03 \x01(\x01\"\xd8\x01\n\x10GeneOntologyTerm\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x11\n\tnamespace\x18\x03 \x01(\t\x12\x12\n\ndefinition\x18\x04 \x01(\t\x12\x0f\n\x07\x63omment\x18\x05 \x01(\t\x12\x0f\n\x07synonym\x18\x06 \x03(\t\x12\x0c\n\x04is_a\x18\x07 \x03(\t\x12\x0e\n\x06\x61lt_id\x18\x08 \x03(\t\x12\x0e\n\x06subset\x18\t \x03(\t\x12\x0c\n\x04xref\x18\n \x03(\t\x12\x13\n\x0bis_obsolete\x18\x0b \x01(\x08\x12\x10\n\x08\x63onsider\x18\x0c \x03(\t\"o\n\x16GeneOntologyAnnotation\x12\r\n\x05title\x18\x01 \x01(\t\x12\r\n\x05genes\x18\x02 \x03(\t\x12\x11\n\tfunctions\x18\x03 \x03(\t\x12\x10\n\x08\x65vidence\x18\x04 \x03(\t\x12\x12\n\nreferences\x18\x05 \x03(\t\"\xee\x01\n\x08\x43ompound\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06target\x18\x03 \x03(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x03(\t\x12\x10\n\x08synonyms\x18\x05 \x03(\t\x12\x0e\n\x06pubmed\x18\x06 \x03(\t\x12\x0e\n\x06report\x18\x07 \x01(\t\x12\x0e\n\x06status\x18\x08 \x01(\t\x12\x11\n\trationale\x18\t \x01(\t\x12\x0e\n\x06smiles\x18\n \x01(\t\x12\x0e\n\x06\x61ssays\x18\x0b \x03(\t\x12\x0e\n\x06source\x18\x0c \x03(\t\x12\x0c\n\x04sids\x18\r \x03(\t\x12\x10\n\x08\x63hebi_id\x18\x0e \x01(\t\"{\n\x05\x41ssay\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0b\n\x03sid\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x10\n\x08\x63\x65llline\x18\x04 \x01(\t\x12\x0e\n\x06pubmed\x18\x05 \x03(\t\x12)\n\x0c\x64rugresponse\x18\x06 \x03(\x0b\x32\x13.bmeg.ResponseCurve\"\x91\x02\n\x0b\x46\x44\x41\x41pproval\x12\x13\n\x0b\x63ompound_id\x18\x01 \x01(\t\x12\x10\n\x08\x61pproved\x18\x02 \x01(\t\x12\x15\n\rapproved_data\x18\x03 \x01(\t\x12\x0f\n\x07\x63ompany\x18\x04 \x01(\t\x12\x0f\n\x07summary\x18\x05 \x01(\t\x12\x1b\n\x13general_information\x18\x06 \x01(\t\x12\x18\n\x10\x63linical_results\x18\x07 \x01(\t\x12\x14\n\x0cside_effects\x18\x08 \x01(\t\x12\x1b\n\x13mechanism_of_action\x18\t \x01(\t\x12\x1e\n\x16\x61\x64\x64itional_information\x18\n \x01(\t\x12\x18\n\x10theraputic_areas\x18\x0b \x01(\t\".\n\x0c\x44oseResponse\x12\x0c\n\x04\x64ose\x18\x01 \x01(\x01\x12\x10\n\x08response\x18\x02 \x01(\x01\"\xd3\x01\n\x0fResponseSummary\x12/\n\x04type\x18\x01 \x01(\x0e\x32!.bmeg.ResponseSummary.SummaryType\x12\r\n\x05value\x18\x02 \x01(\x01\x12\x0c\n\x04unit\x18\x03 \x01(\t\"r\n\x0bSummaryType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x08\n\x04\x45\x43\x35\x30\x10\x01\x12\x08\n\x04IC50\x10\x02\x12\x08\n\x04LD50\x10\x03\x12\x08\n\x04GR50\x10\x04\x12\x08\n\x04\x41MAX\x10\x05\x12\x07\n\x03\x41UC\x10\x06\x12\x11\n\rACTIVITY_AREA\x10\x07\x12\x08\n\x04RMSE\x10\x08\"2\n\x0f\x43ompoundElement\x12\x10\n\x08\x63ompound\x18\x01 \x01(\t\x12\r\n\x05ratio\x18\x03 \x01(\x01\"\xcb\x02\n\rResponseCurve\x12\x0b\n\x03gid\x18\x01 \x01(\t\x12\x36\n\x0cresponseType\x18\x02 \x01(\x0e\x32 .bmeg.ResponseCurve.ResponseType\x12\"\n\x06values\x18\x03 \x03(\x0b\x32\x12.bmeg.DoseResponse\x12\x16\n\x0egrowthStandard\x18\x04 \x01(\x01\x12(\n\tcompounds\x18\x05 \x03(\x0b\x32\x15.bmeg.CompoundElement\x12\x0e\n\x06sample\x18\x06 \x01(\t\x12&\n\x07summary\x18\x07 \x03(\x0b\x32\x15.bmeg.ResponseSummary\x12\x10\n\x08\x63ontrols\x18\x08 \x03(\x01\x12\x0e\n\x06\x62lanks\x18\t \x03(\x01\"5\n\x0cResponseType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06GROWTH\x10\x01\x12\x0c\n\x08\x41\x43TIVITY\x10\x02\x62\x06proto3')
+  ,
+  dependencies=[ga4gh_dot_genotype__phenotype__pb2.DESCRIPTOR,])
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -69,8 +72,8 @@ _RESPONSESUMMARY_SUMMARYTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1348,
-  serialized_end=1462,
+  serialized_start=1550,
+  serialized_end=1664,
 )
 _sym_db.RegisterEnumDescriptor(_RESPONSESUMMARY_SUMMARYTYPE)
 
@@ -95,58 +98,30 @@ _RESPONSECURVE_RESPONSETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1719,
-  serialized_end=1772,
+  serialized_start=1997,
+  serialized_end=2050,
 )
 _sym_db.RegisterEnumDescriptor(_RESPONSECURVE_RESPONSETYPE)
 
 
-_PHENOTYPEASSOCIATION = _descriptor.Descriptor(
-  name='PhenotypeAssociation',
-  full_name='bmeg.PhenotypeAssociation',
+_PREDICTOR_BACKGROUNDENTRY = _descriptor.Descriptor(
+  name='BackgroundEntry',
+  full_name='bmeg.Predictor.BackgroundEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='bmeg.PhenotypeAssociation.id', index=0,
+      name='key', full_name='bmeg.Predictor.BackgroundEntry.key', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='gid', full_name='bmeg.PhenotypeAssociation.gid', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='type', full_name='bmeg.PhenotypeAssociation.type', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hasGenotype', full_name='bmeg.PhenotypeAssociation.hasGenotype', index=3,
-      number=4, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hasPhenotype', full_name='bmeg.PhenotypeAssociation.hasPhenotype', index=4,
-      number=5, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hasContext', full_name='bmeg.PhenotypeAssociation.hasContext', index=5,
-      number=6, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
+      name='value', full_name='bmeg.Predictor.BackgroundEntry.value', index=1,
+      number=2, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -156,56 +131,114 @@ _PHENOTYPEASSOCIATION = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=299,
+  serialized_end=348,
+)
+
+_PREDICTOR = _descriptor.Descriptor(
+  name='Predictor',
+  full_name='bmeg.Predictor',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='bmeg.Predictor.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='phenotype', full_name='bmeg.Predictor.phenotype', index=1,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='genotype', full_name='bmeg.Predictor.genotype', index=2,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='environmental_contexts', full_name='bmeg.Predictor.environmental_contexts', index=3,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='model_id', full_name='bmeg.Predictor.model_id', index=4,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='description', full_name='bmeg.Predictor.description', index=5,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='background', full_name='bmeg.Predictor.background', index=6,
+      number=8, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[_PREDICTOR_BACKGROUNDENTRY, ],
+  enum_types=[
+  ],
   options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25,
-  serialized_end=149,
+  serialized_start=58,
+  serialized_end=348,
 )
 
 
-_PHENOTYPE = _descriptor.Descriptor(
-  name='Phenotype',
-  full_name='bmeg.Phenotype',
+_PREDICTORASSOCIATION = _descriptor.Descriptor(
+  name='PredictorAssociation',
+  full_name='bmeg.PredictorAssociation',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='bmeg.Phenotype.id', index=0,
+      name='predictor_id', full_name='bmeg.PredictorAssociation.predictor_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='gid', full_name='bmeg.Phenotype.gid', index=1,
+      name='sample_id', full_name='bmeg.PredictorAssociation.sample_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='type', full_name='bmeg.Phenotype.type', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='isType', full_name='bmeg.Phenotype.isType', index=3,
-      number=4, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='description', full_name='bmeg.Phenotype.description', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='value', full_name='bmeg.PredictorAssociation.value', index=2,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -221,8 +254,8 @@ _PHENOTYPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=151,
-  serialized_end=238,
+  serialized_start=350,
+  serialized_end=428,
 )
 
 
@@ -241,71 +274,78 @@ _GENEONTOLOGYTERM = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='namespace', full_name='bmeg.GeneOntologyTerm.namespace', index=1,
+      name='name', full_name='bmeg.GeneOntologyTerm.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='def', full_name='bmeg.GeneOntologyTerm.def', index=2,
+      name='namespace', full_name='bmeg.GeneOntologyTerm.namespace', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='comment', full_name='bmeg.GeneOntologyTerm.comment', index=3,
+      name='definition', full_name='bmeg.GeneOntologyTerm.definition', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='synonym', full_name='bmeg.GeneOntologyTerm.synonym', index=4,
+      name='comment', full_name='bmeg.GeneOntologyTerm.comment', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='is_a', full_name='bmeg.GeneOntologyTerm.is_a', index=5,
+      name='synonym', full_name='bmeg.GeneOntologyTerm.synonym', index=5,
       number=6, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='alt_id', full_name='bmeg.GeneOntologyTerm.alt_id', index=6,
+      name='is_a', full_name='bmeg.GeneOntologyTerm.is_a', index=6,
       number=7, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='subset', full_name='bmeg.GeneOntologyTerm.subset', index=7,
+      name='alt_id', full_name='bmeg.GeneOntologyTerm.alt_id', index=7,
       number=8, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='xref', full_name='bmeg.GeneOntologyTerm.xref', index=8,
+      name='subset', full_name='bmeg.GeneOntologyTerm.subset', index=8,
       number=9, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='is_obsolete', full_name='bmeg.GeneOntologyTerm.is_obsolete', index=9,
-      number=10, type=8, cpp_type=7, label=1,
+      name='xref', full_name='bmeg.GeneOntologyTerm.xref', index=9,
+      number=10, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_obsolete', full_name='bmeg.GeneOntologyTerm.is_obsolete', index=10,
+      number=11, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='consider', full_name='bmeg.GeneOntologyTerm.consider', index=10,
-      number=11, type=9, cpp_type=9, label=3,
+      name='consider', full_name='bmeg.GeneOntologyTerm.consider', index=11,
+      number=12, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -322,125 +362,50 @@ _GENEONTOLOGYTERM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=241,
-  serialized_end=436,
+  serialized_start=431,
+  serialized_end=647,
 )
 
 
-_EVIDENCE_INFOENTRY = _descriptor.Descriptor(
-  name='InfoEntry',
-  full_name='bmeg.Evidence.InfoEntry',
+_GENEONTOLOGYANNOTATION = _descriptor.Descriptor(
+  name='GeneOntologyAnnotation',
+  full_name='bmeg.GeneOntologyAnnotation',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='bmeg.Evidence.InfoEntry.key', index=0,
+      name='title', full_name='bmeg.GeneOntologyAnnotation.title', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='value', full_name='bmeg.Evidence.InfoEntry.value', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=544,
-  serialized_end=587,
-)
-
-_EVIDENCE = _descriptor.Descriptor(
-  name='Evidence',
-  full_name='bmeg.Evidence',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='bmeg.Evidence.id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='genes', full_name='bmeg.GeneOntologyAnnotation.genes', index=1,
+      number=2, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='gid', full_name='bmeg.Evidence.gid', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='functions', full_name='bmeg.GeneOntologyAnnotation.functions', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='type', full_name='bmeg.Evidence.type', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='pmid', full_name='bmeg.Evidence.pmid', index=3,
+      name='evidence', full_name='bmeg.GeneOntologyAnnotation.evidence', index=3,
       number=4, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='info', full_name='bmeg.Evidence.info', index=4,
-      number=5, type=11, cpp_type=10, label=3,
+      name='references', full_name='bmeg.GeneOntologyAnnotation.references', index=4,
+      number=5, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_EVIDENCE_INFOENTRY, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=439,
-  serialized_end=587,
-)
-
-
-_COMPOUND_INFOENTRY = _descriptor.Descriptor(
-  name='InfoEntry',
-  full_name='bmeg.Compound.InfoEntry',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='key', full_name='bmeg.Compound.InfoEntry.key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='value', full_name='bmeg.Compound.InfoEntry.value', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -450,15 +415,16 @@ _COMPOUND_INFOENTRY = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=544,
-  serialized_end=587,
+  serialized_start=649,
+  serialized_end=760,
 )
+
 
 _COMPOUND = _descriptor.Descriptor(
   name='Compound',
@@ -475,191 +441,100 @@ _COMPOUND = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='gid', full_name='bmeg.Compound.gid', index=1,
+      name='name', full_name='bmeg.Compound.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='type', full_name='bmeg.Compound.type', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='target', full_name='bmeg.Compound.target', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='name', full_name='bmeg.Compound.name', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='description', full_name='bmeg.Compound.description', index=3,
+      number=4, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='target', full_name='bmeg.Compound.target', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='synonyms', full_name='bmeg.Compound.synonyms', index=4,
+      number=5, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='report', full_name='bmeg.Compound.report', index=5,
-      number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='pubmed', full_name='bmeg.Compound.pubmed', index=5,
+      number=6, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='status', full_name='bmeg.Compound.status', index=6,
+      name='report', full_name='bmeg.Compound.report', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='rationale', full_name='bmeg.Compound.rationale', index=7,
+      name='status', full_name='bmeg.Compound.status', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='smiles', full_name='bmeg.Compound.smiles', index=8,
+      name='rationale', full_name='bmeg.Compound.rationale', index=8,
       number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='source', full_name='bmeg.Compound.source', index=9,
-      number=12, type=9, cpp_type=9, label=1,
+      name='smiles', full_name='bmeg.Compound.smiles', index=9,
+      number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='pubchemcid', full_name='bmeg.Compound.pubchemcid', index=10,
-      number=13, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='assays', full_name='bmeg.Compound.assays', index=10,
+      number=11, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='pubchemsid', full_name='bmeg.Compound.pubchemsid', index=11,
+      name='source', full_name='bmeg.Compound.source', index=11,
+      number=12, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sids', full_name='bmeg.Compound.sids', index=12,
+      number=13, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='chebi_id', full_name='bmeg.Compound.chebi_id', index=13,
       number=14, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='toxicity', full_name='bmeg.Compound.toxicity', index=12,
-      number=15, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='bioassays', full_name='bmeg.Compound.bioassays', index=13,
-      number=16, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='drug_id', full_name='bmeg.Compound.drug_id', index=14,
-      number=17, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='chebi_id', full_name='bmeg.Compound.chebi_id', index=15,
-      number=18, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='biological_role', full_name='bmeg.Compound.biological_role', index=16,
-      number=19, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='biological_role_info', full_name='bmeg.Compound.biological_role_info', index=17,
-      number=20, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='application', full_name='bmeg.Compound.application', index=18,
-      number=21, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='application_info', full_name='bmeg.Compound.application_info', index=19,
-      number=22, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='pubchemtype', full_name='bmeg.Compound.pubchemtype', index=20,
-      number=23, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='fda_approved', full_name='bmeg.Compound.fda_approved', index=21,
-      number=24, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='fda_approved_date', full_name='bmeg.Compound.fda_approved_date', index=22,
-      number=25, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='fda_data_origin', full_name='bmeg.Compound.fda_data_origin', index=23,
-      number=26, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='field_of_fda_approval_from', full_name='bmeg.Compound.field_of_fda_approval_from', index=24,
-      number=27, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='synonyms', full_name='bmeg.Compound.synonyms', index=25,
-      number=10, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='info', full_name='bmeg.Compound.info', index=26,
-      number=11, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
   ],
   extensions=[
   ],
-  nested_types=[_COMPOUND_INFOENTRY, ],
+  nested_types=[],
   enum_types=[
   ],
   options=None,
@@ -668,8 +543,175 @@ _COMPOUND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=590,
-  serialized_end=1200,
+  serialized_start=763,
+  serialized_end=1001,
+)
+
+
+_ASSAY = _descriptor.Descriptor(
+  name='Assay',
+  full_name='bmeg.Assay',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='bmeg.Assay.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sid', full_name='bmeg.Assay.sid', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='bmeg.Assay.name', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cellline', full_name='bmeg.Assay.cellline', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='pubmed', full_name='bmeg.Assay.pubmed', index=4,
+      number=5, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='drugresponse', full_name='bmeg.Assay.drugresponse', index=5,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1003,
+  serialized_end=1126,
+)
+
+
+_FDAAPPROVAL = _descriptor.Descriptor(
+  name='FDAApproval',
+  full_name='bmeg.FDAApproval',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='compound_id', full_name='bmeg.FDAApproval.compound_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='approved', full_name='bmeg.FDAApproval.approved', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='approved_data', full_name='bmeg.FDAApproval.approved_data', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='company', full_name='bmeg.FDAApproval.company', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='summary', full_name='bmeg.FDAApproval.summary', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='general_information', full_name='bmeg.FDAApproval.general_information', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='clinical_results', full_name='bmeg.FDAApproval.clinical_results', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='side_effects', full_name='bmeg.FDAApproval.side_effects', index=7,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='mechanism_of_action', full_name='bmeg.FDAApproval.mechanism_of_action', index=8,
+      number=9, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='additional_information', full_name='bmeg.FDAApproval.additional_information', index=9,
+      number=10, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='theraputic_areas', full_name='bmeg.FDAApproval.theraputic_areas', index=10,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1129,
+  serialized_end=1402,
 )
 
 
@@ -706,8 +748,8 @@ _DOSERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1202,
-  serialized_end=1248,
+  serialized_start=1404,
+  serialized_end=1450,
 )
 
 
@@ -752,8 +794,46 @@ _RESPONSESUMMARY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1251,
-  serialized_end=1462,
+  serialized_start=1453,
+  serialized_end=1664,
+)
+
+
+_COMPOUNDELEMENT = _descriptor.Descriptor(
+  name='CompoundElement',
+  full_name='bmeg.CompoundElement',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='compound', full_name='bmeg.CompoundElement.compound', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='ratio', full_name='bmeg.CompoundElement.ratio', index=1,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1666,
+  serialized_end=1716,
 )
 
 
@@ -793,9 +873,9 @@ _RESPONSECURVE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='compound', full_name='bmeg.ResponseCurve.compound', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='compounds', full_name='bmeg.ResponseCurve.compounds', index=4,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -840,43 +920,55 @@ _RESPONSECURVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1465,
-  serialized_end=1772,
+  serialized_start=1719,
+  serialized_end=2050,
 )
 
-_EVIDENCE_INFOENTRY.containing_type = _EVIDENCE
-_EVIDENCE.fields_by_name['info'].message_type = _EVIDENCE_INFOENTRY
-_COMPOUND_INFOENTRY.containing_type = _COMPOUND
-_COMPOUND.fields_by_name['info'].message_type = _COMPOUND_INFOENTRY
+_PREDICTOR_BACKGROUNDENTRY.containing_type = _PREDICTOR
+_PREDICTOR.fields_by_name['phenotype'].message_type = ga4gh_dot_genotype__phenotype__pb2._PHENOTYPEINSTANCE
+_PREDICTOR.fields_by_name['environmental_contexts'].message_type = ga4gh_dot_genotype__phenotype__pb2._ENVIRONMENTALCONTEXT
+_PREDICTOR.fields_by_name['background'].message_type = _PREDICTOR_BACKGROUNDENTRY
+_ASSAY.fields_by_name['drugresponse'].message_type = _RESPONSECURVE
 _RESPONSESUMMARY.fields_by_name['type'].enum_type = _RESPONSESUMMARY_SUMMARYTYPE
 _RESPONSESUMMARY_SUMMARYTYPE.containing_type = _RESPONSESUMMARY
 _RESPONSECURVE.fields_by_name['responseType'].enum_type = _RESPONSECURVE_RESPONSETYPE
 _RESPONSECURVE.fields_by_name['values'].message_type = _DOSERESPONSE
+_RESPONSECURVE.fields_by_name['compounds'].message_type = _COMPOUNDELEMENT
 _RESPONSECURVE.fields_by_name['summary'].message_type = _RESPONSESUMMARY
 _RESPONSECURVE_RESPONSETYPE.containing_type = _RESPONSECURVE
-DESCRIPTOR.message_types_by_name['PhenotypeAssociation'] = _PHENOTYPEASSOCIATION
-DESCRIPTOR.message_types_by_name['Phenotype'] = _PHENOTYPE
+DESCRIPTOR.message_types_by_name['Predictor'] = _PREDICTOR
+DESCRIPTOR.message_types_by_name['PredictorAssociation'] = _PREDICTORASSOCIATION
 DESCRIPTOR.message_types_by_name['GeneOntologyTerm'] = _GENEONTOLOGYTERM
-DESCRIPTOR.message_types_by_name['Evidence'] = _EVIDENCE
+DESCRIPTOR.message_types_by_name['GeneOntologyAnnotation'] = _GENEONTOLOGYANNOTATION
 DESCRIPTOR.message_types_by_name['Compound'] = _COMPOUND
+DESCRIPTOR.message_types_by_name['Assay'] = _ASSAY
+DESCRIPTOR.message_types_by_name['FDAApproval'] = _FDAAPPROVAL
 DESCRIPTOR.message_types_by_name['DoseResponse'] = _DOSERESPONSE
 DESCRIPTOR.message_types_by_name['ResponseSummary'] = _RESPONSESUMMARY
+DESCRIPTOR.message_types_by_name['CompoundElement'] = _COMPOUNDELEMENT
 DESCRIPTOR.message_types_by_name['ResponseCurve'] = _RESPONSECURVE
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-PhenotypeAssociation = _reflection.GeneratedProtocolMessageType('PhenotypeAssociation', (_message.Message,), dict(
-  DESCRIPTOR = _PHENOTYPEASSOCIATION,
-  __module__ = 'phenotype_pb2'
-  # @@protoc_insertion_point(class_scope:bmeg.PhenotypeAssociation)
-  ))
-_sym_db.RegisterMessage(PhenotypeAssociation)
+Predictor = _reflection.GeneratedProtocolMessageType('Predictor', (_message.Message,), dict(
 
-Phenotype = _reflection.GeneratedProtocolMessageType('Phenotype', (_message.Message,), dict(
-  DESCRIPTOR = _PHENOTYPE,
+  BackgroundEntry = _reflection.GeneratedProtocolMessageType('BackgroundEntry', (_message.Message,), dict(
+    DESCRIPTOR = _PREDICTOR_BACKGROUNDENTRY,
+    __module__ = 'phenotype_pb2'
+    # @@protoc_insertion_point(class_scope:bmeg.Predictor.BackgroundEntry)
+    ))
+  ,
+  DESCRIPTOR = _PREDICTOR,
   __module__ = 'phenotype_pb2'
-  # @@protoc_insertion_point(class_scope:bmeg.Phenotype)
+  # @@protoc_insertion_point(class_scope:bmeg.Predictor)
   ))
-_sym_db.RegisterMessage(Phenotype)
+_sym_db.RegisterMessage(Predictor)
+_sym_db.RegisterMessage(Predictor.BackgroundEntry)
+
+PredictorAssociation = _reflection.GeneratedProtocolMessageType('PredictorAssociation', (_message.Message,), dict(
+  DESCRIPTOR = _PREDICTORASSOCIATION,
+  __module__ = 'phenotype_pb2'
+  # @@protoc_insertion_point(class_scope:bmeg.PredictorAssociation)
+  ))
+_sym_db.RegisterMessage(PredictorAssociation)
 
 GeneOntologyTerm = _reflection.GeneratedProtocolMessageType('GeneOntologyTerm', (_message.Message,), dict(
   DESCRIPTOR = _GENEONTOLOGYTERM,
@@ -885,35 +977,33 @@ GeneOntologyTerm = _reflection.GeneratedProtocolMessageType('GeneOntologyTerm', 
   ))
 _sym_db.RegisterMessage(GeneOntologyTerm)
 
-Evidence = _reflection.GeneratedProtocolMessageType('Evidence', (_message.Message,), dict(
-
-  InfoEntry = _reflection.GeneratedProtocolMessageType('InfoEntry', (_message.Message,), dict(
-    DESCRIPTOR = _EVIDENCE_INFOENTRY,
-    __module__ = 'phenotype_pb2'
-    # @@protoc_insertion_point(class_scope:bmeg.Evidence.InfoEntry)
-    ))
-  ,
-  DESCRIPTOR = _EVIDENCE,
+GeneOntologyAnnotation = _reflection.GeneratedProtocolMessageType('GeneOntologyAnnotation', (_message.Message,), dict(
+  DESCRIPTOR = _GENEONTOLOGYANNOTATION,
   __module__ = 'phenotype_pb2'
-  # @@protoc_insertion_point(class_scope:bmeg.Evidence)
+  # @@protoc_insertion_point(class_scope:bmeg.GeneOntologyAnnotation)
   ))
-_sym_db.RegisterMessage(Evidence)
-_sym_db.RegisterMessage(Evidence.InfoEntry)
+_sym_db.RegisterMessage(GeneOntologyAnnotation)
 
 Compound = _reflection.GeneratedProtocolMessageType('Compound', (_message.Message,), dict(
-
-  InfoEntry = _reflection.GeneratedProtocolMessageType('InfoEntry', (_message.Message,), dict(
-    DESCRIPTOR = _COMPOUND_INFOENTRY,
-    __module__ = 'phenotype_pb2'
-    # @@protoc_insertion_point(class_scope:bmeg.Compound.InfoEntry)
-    ))
-  ,
   DESCRIPTOR = _COMPOUND,
   __module__ = 'phenotype_pb2'
   # @@protoc_insertion_point(class_scope:bmeg.Compound)
   ))
 _sym_db.RegisterMessage(Compound)
-_sym_db.RegisterMessage(Compound.InfoEntry)
+
+Assay = _reflection.GeneratedProtocolMessageType('Assay', (_message.Message,), dict(
+  DESCRIPTOR = _ASSAY,
+  __module__ = 'phenotype_pb2'
+  # @@protoc_insertion_point(class_scope:bmeg.Assay)
+  ))
+_sym_db.RegisterMessage(Assay)
+
+FDAApproval = _reflection.GeneratedProtocolMessageType('FDAApproval', (_message.Message,), dict(
+  DESCRIPTOR = _FDAAPPROVAL,
+  __module__ = 'phenotype_pb2'
+  # @@protoc_insertion_point(class_scope:bmeg.FDAApproval)
+  ))
+_sym_db.RegisterMessage(FDAApproval)
 
 DoseResponse = _reflection.GeneratedProtocolMessageType('DoseResponse', (_message.Message,), dict(
   DESCRIPTOR = _DOSERESPONSE,
@@ -929,6 +1019,13 @@ ResponseSummary = _reflection.GeneratedProtocolMessageType('ResponseSummary', (_
   ))
 _sym_db.RegisterMessage(ResponseSummary)
 
+CompoundElement = _reflection.GeneratedProtocolMessageType('CompoundElement', (_message.Message,), dict(
+  DESCRIPTOR = _COMPOUNDELEMENT,
+  __module__ = 'phenotype_pb2'
+  # @@protoc_insertion_point(class_scope:bmeg.CompoundElement)
+  ))
+_sym_db.RegisterMessage(CompoundElement)
+
 ResponseCurve = _reflection.GeneratedProtocolMessageType('ResponseCurve', (_message.Message,), dict(
   DESCRIPTOR = _RESPONSECURVE,
   __module__ = 'phenotype_pb2'
@@ -937,8 +1034,6 @@ ResponseCurve = _reflection.GeneratedProtocolMessageType('ResponseCurve', (_mess
 _sym_db.RegisterMessage(ResponseCurve)
 
 
-_EVIDENCE_INFOENTRY.has_options = True
-_EVIDENCE_INFOENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
-_COMPOUND_INFOENTRY.has_options = True
-_COMPOUND_INFOENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
+_PREDICTOR_BACKGROUNDENTRY.has_options = True
+_PREDICTOR_BACKGROUNDENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
 # @@protoc_insertion_point(module_scope)
