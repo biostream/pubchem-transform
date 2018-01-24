@@ -20,10 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='phenotype.proto',
   package='bmeg',
   syntax='proto3',
-  serialized_pb=_b('\n\x0fphenotype.proto\x12\x04\x62meg\x1a\x1ega4gh/genotype_phenotype.proto\"\xa2\x02\n\tPredictor\x12\n\n\x02id\x18\x01 \x01(\t\x12+\n\tphenotype\x18\x03 \x01(\x0b\x32\x18.ga4gh.PhenotypeInstance\x12\x10\n\x08genotype\x18\x04 \x01(\t\x12;\n\x16\x65nvironmental_contexts\x18\x05 \x03(\x0b\x32\x1b.ga4gh.EnvironmentalContext\x12\x10\n\x08model_id\x18\x06 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x07 \x01(\t\x12\x33\n\nbackground\x18\x08 \x03(\x0b\x32\x1f.bmeg.Predictor.BackgroundEntry\x1a\x31\n\x0f\x42\x61\x63kgroundEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01:\x02\x38\x01\"N\n\x14PredictorAssociation\x12\x14\n\x0cpredictor_id\x18\x01 \x01(\t\x12\x11\n\tsample_id\x18\x02 \x01(\t\x12\r\n\x05value\x18\x03 \x01(\x01\"\xd8\x01\n\x10GeneOntologyTerm\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x11\n\tnamespace\x18\x03 \x01(\t\x12\x12\n\ndefinition\x18\x04 \x01(\t\x12\x0f\n\x07\x63omment\x18\x05 \x01(\t\x12\x0f\n\x07synonym\x18\x06 \x03(\t\x12\x0c\n\x04is_a\x18\x07 \x03(\t\x12\x0e\n\x06\x61lt_id\x18\x08 \x03(\t\x12\x0e\n\x06subset\x18\t \x03(\t\x12\x0c\n\x04xref\x18\n \x03(\t\x12\x13\n\x0bis_obsolete\x18\x0b \x01(\x08\x12\x10\n\x08\x63onsider\x18\x0c \x03(\t\"o\n\x16GeneOntologyAnnotation\x12\r\n\x05title\x18\x01 \x01(\t\x12\r\n\x05genes\x18\x02 \x03(\t\x12\x11\n\tfunctions\x18\x03 \x03(\t\x12\x10\n\x08\x65vidence\x18\x04 \x03(\t\x12\x12\n\nreferences\x18\x05 \x03(\t\"\xee\x01\n\x08\x43ompound\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06target\x18\x03 \x03(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x03(\t\x12\x10\n\x08synonyms\x18\x05 \x03(\t\x12\x0e\n\x06pubmed\x18\x06 \x03(\t\x12\x0e\n\x06report\x18\x07 \x01(\t\x12\x0e\n\x06status\x18\x08 \x01(\t\x12\x11\n\trationale\x18\t \x01(\t\x12\x0e\n\x06smiles\x18\n \x01(\t\x12\x0e\n\x06\x61ssays\x18\x0b \x03(\t\x12\x0e\n\x06source\x18\x0c \x03(\t\x12\x0c\n\x04sids\x18\r \x03(\t\x12\x10\n\x08\x63hebi_id\x18\x0e \x01(\t\"{\n\x05\x41ssay\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0b\n\x03sid\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x10\n\x08\x63\x65llline\x18\x04 \x01(\t\x12\x0e\n\x06pubmed\x18\x05 \x03(\t\x12)\n\x0c\x64rugresponse\x18\x06 \x03(\x0b\x32\x13.bmeg.ResponseCurve\"\x91\x02\n\x0b\x46\x44\x41\x41pproval\x12\x13\n\x0b\x63ompound_id\x18\x01 \x01(\t\x12\x10\n\x08\x61pproved\x18\x02 \x01(\t\x12\x15\n\rapproved_data\x18\x03 \x01(\t\x12\x0f\n\x07\x63ompany\x18\x04 \x01(\t\x12\x0f\n\x07summary\x18\x05 \x01(\t\x12\x1b\n\x13general_information\x18\x06 \x01(\t\x12\x18\n\x10\x63linical_results\x18\x07 \x01(\t\x12\x14\n\x0cside_effects\x18\x08 \x01(\t\x12\x1b\n\x13mechanism_of_action\x18\t \x01(\t\x12\x1e\n\x16\x61\x64\x64itional_information\x18\n \x01(\t\x12\x18\n\x10theraputic_areas\x18\x0b \x01(\t\".\n\x0c\x44oseResponse\x12\x0c\n\x04\x64ose\x18\x01 \x01(\x01\x12\x10\n\x08response\x18\x02 \x01(\x01\"\xd3\x01\n\x0fResponseSummary\x12/\n\x04type\x18\x01 \x01(\x0e\x32!.bmeg.ResponseSummary.SummaryType\x12\r\n\x05value\x18\x02 \x01(\x01\x12\x0c\n\x04unit\x18\x03 \x01(\t\"r\n\x0bSummaryType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x08\n\x04\x45\x43\x35\x30\x10\x01\x12\x08\n\x04IC50\x10\x02\x12\x08\n\x04LD50\x10\x03\x12\x08\n\x04GR50\x10\x04\x12\x08\n\x04\x41MAX\x10\x05\x12\x07\n\x03\x41UC\x10\x06\x12\x11\n\rACTIVITY_AREA\x10\x07\x12\x08\n\x04RMSE\x10\x08\"2\n\x0f\x43ompoundElement\x12\x10\n\x08\x63ompound\x18\x01 \x01(\t\x12\r\n\x05ratio\x18\x03 \x01(\x01\"\xcb\x02\n\rResponseCurve\x12\x0b\n\x03gid\x18\x01 \x01(\t\x12\x36\n\x0cresponseType\x18\x02 \x01(\x0e\x32 .bmeg.ResponseCurve.ResponseType\x12\"\n\x06values\x18\x03 \x03(\x0b\x32\x12.bmeg.DoseResponse\x12\x16\n\x0egrowthStandard\x18\x04 \x01(\x01\x12(\n\tcompounds\x18\x05 \x03(\x0b\x32\x15.bmeg.CompoundElement\x12\x0e\n\x06sample\x18\x06 \x01(\t\x12&\n\x07summary\x18\x07 \x03(\x0b\x32\x15.bmeg.ResponseSummary\x12\x10\n\x08\x63ontrols\x18\x08 \x03(\x01\x12\x0e\n\x06\x62lanks\x18\t \x03(\x01\"5\n\x0cResponseType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06GROWTH\x10\x01\x12\x0c\n\x08\x41\x43TIVITY\x10\x02\x62\x06proto3')
+  serialized_pb=_b('\n\x0fphenotype.proto\x12\x04\x62meg\x1a\x1ega4gh/genotype_phenotype.proto\"\xa2\x02\n\tPredictor\x12\n\n\x02id\x18\x01 \x01(\t\x12+\n\tphenotype\x18\x03 \x01(\x0b\x32\x18.ga4gh.PhenotypeInstance\x12\x10\n\x08genotype\x18\x04 \x01(\t\x12;\n\x16\x65nvironmental_contexts\x18\x05 \x03(\x0b\x32\x1b.ga4gh.EnvironmentalContext\x12\x10\n\x08model_id\x18\x06 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x07 \x01(\t\x12\x33\n\nbackground\x18\x08 \x03(\x0b\x32\x1f.bmeg.Predictor.BackgroundEntry\x1a\x31\n\x0f\x42\x61\x63kgroundEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01:\x02\x38\x01\"N\n\x14PredictorAssociation\x12\x14\n\x0cpredictor_id\x18\x01 \x01(\t\x12\x11\n\tsample_id\x18\x02 \x01(\t\x12\r\n\x05value\x18\x03 \x01(\x01\"\xd8\x01\n\x10GeneOntologyTerm\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x11\n\tnamespace\x18\x03 \x01(\t\x12\x12\n\ndefinition\x18\x04 \x01(\t\x12\x0f\n\x07\x63omment\x18\x05 \x01(\t\x12\x0f\n\x07synonym\x18\x06 \x03(\t\x12\x0c\n\x04is_a\x18\x07 \x03(\t\x12\x0e\n\x06\x61lt_id\x18\x08 \x03(\t\x12\x0e\n\x06subset\x18\t \x03(\t\x12\x0c\n\x04xref\x18\n \x03(\t\x12\x13\n\x0bis_obsolete\x18\x0b \x01(\x08\x12\x10\n\x08\x63onsider\x18\x0c \x03(\t\"o\n\x16GeneOntologyAnnotation\x12\r\n\x05title\x18\x01 \x01(\t\x12\r\n\x05genes\x18\x02 \x03(\t\x12\x11\n\tfunctions\x18\x03 \x03(\t\x12\x10\n\x08\x65vidence\x18\x04 \x03(\t\x12\x12\n\nreferences\x18\x05 \x03(\t\"\xee\x01\n\x08\x43ompound\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06target\x18\x03 \x03(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x03(\t\x12\x10\n\x08synonyms\x18\x05 \x03(\t\x12\x0e\n\x06pubmed\x18\x06 \x03(\t\x12\x0e\n\x06report\x18\x07 \x01(\t\x12\x0e\n\x06status\x18\x08 \x01(\t\x12\x11\n\trationale\x18\t \x01(\t\x12\x0e\n\x06smiles\x18\n \x01(\t\x12\x0e\n\x06\x61ssays\x18\x0b \x03(\t\x12\x0e\n\x06source\x18\x0c \x03(\t\x12\x0c\n\x04sids\x18\r \x03(\t\x12\x10\n\x08\x63hebi_id\x18\x0e \x01(\t\"\x90\x01\n\x05\x41ssay\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0b\n\x03sid\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x10\n\x08\x63\x65llline\x18\x04 \x01(\t\x12\x0e\n\x06pubmed\x18\x05 \x03(\t\x12)\n\x0c\x64rugresponse\x18\x06 \x03(\x0b\x32\x13.bmeg.ResponseCurve\x12\x13\n\x0bgene_target\x18\x07 \x03(\t\"\x91\x02\n\x0b\x46\x44\x41\x41pproval\x12\x13\n\x0b\x63ompound_id\x18\x01 \x01(\t\x12\x10\n\x08\x61pproved\x18\x02 \x01(\t\x12\x15\n\rapproved_data\x18\x03 \x01(\t\x12\x0f\n\x07\x63ompany\x18\x04 \x01(\t\x12\x0f\n\x07summary\x18\x05 \x01(\t\x12\x1b\n\x13general_information\x18\x06 \x01(\t\x12\x18\n\x10\x63linical_results\x18\x07 \x01(\t\x12\x14\n\x0cside_effects\x18\x08 \x01(\t\x12\x1b\n\x13mechanism_of_action\x18\t \x01(\t\x12\x1e\n\x16\x61\x64\x64itional_information\x18\n \x01(\t\x12\x18\n\x10theraputic_areas\x18\x0b \x01(\t\".\n\x0c\x44oseResponse\x12\x0c\n\x04\x64ose\x18\x01 \x01(\x01\x12\x10\n\x08response\x18\x02 \x01(\x01\"\xd3\x01\n\x0fResponseSummary\x12/\n\x04type\x18\x01 \x01(\x0e\x32!.bmeg.ResponseSummary.SummaryType\x12\r\n\x05value\x18\x02 \x01(\x01\x12\x0c\n\x04unit\x18\x03 \x01(\t\"r\n\x0bSummaryType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x08\n\x04\x45\x43\x35\x30\x10\x01\x12\x08\n\x04IC50\x10\x02\x12\x08\n\x04LD50\x10\x03\x12\x08\n\x04GR50\x10\x04\x12\x08\n\x04\x41MAX\x10\x05\x12\x07\n\x03\x41UC\x10\x06\x12\x11\n\rACTIVITY_AREA\x10\x07\x12\x08\n\x04RMSE\x10\x08\"2\n\x0f\x43ompoundElement\x12\x10\n\x08\x63ompound\x18\x01 \x01(\t\x12\r\n\x05ratio\x18\x03 \x01(\x01\"\xcb\x02\n\rResponseCurve\x12\x0b\n\x03gid\x18\x01 \x01(\t\x12\x36\n\x0cresponseType\x18\x02 \x01(\x0e\x32 .bmeg.ResponseCurve.ResponseType\x12\"\n\x06values\x18\x03 \x03(\x0b\x32\x12.bmeg.DoseResponse\x12\x16\n\x0egrowthStandard\x18\x04 \x01(\x01\x12(\n\tcompounds\x18\x05 \x03(\x0b\x32\x15.bmeg.CompoundElement\x12\x0e\n\x06sample\x18\x06 \x01(\t\x12&\n\x07summary\x18\x07 \x03(\x0b\x32\x15.bmeg.ResponseSummary\x12\x10\n\x08\x63ontrols\x18\x08 \x03(\x01\x12\x0e\n\x06\x62lanks\x18\t \x03(\x01\"5\n\x0cResponseType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06GROWTH\x10\x01\x12\x0c\n\x08\x41\x43TIVITY\x10\x02\"S\n\tAssayData\x12\x10\n\x08\x61ssay_id\x18\x01 \x01(\t\x12\x13\n\x0b\x63ompound_id\x18\x02 \x01(\t\x12\x0e\n\x06\x61\x63tive\x18\x03 \x01(\x08\x12\x0f\n\x07\x63omment\x18\x04 \x01(\tb\x06proto3')
   ,
   dependencies=[ga4gh_dot_genotype__phenotype__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
@@ -72,8 +71,8 @@ _RESPONSESUMMARY_SUMMARYTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1550,
-  serialized_end=1664,
+  serialized_start=1572,
+  serialized_end=1686,
 )
 _sym_db.RegisterEnumDescriptor(_RESPONSESUMMARY_SUMMARYTYPE)
 
@@ -98,8 +97,8 @@ _RESPONSECURVE_RESPONSETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1997,
-  serialized_end=2050,
+  serialized_start=2019,
+  serialized_end=2072,
 )
 _sym_db.RegisterEnumDescriptor(_RESPONSECURVE_RESPONSETYPE)
 
@@ -597,6 +596,13 @@ _ASSAY = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='gene_target', full_name='bmeg.Assay.gene_target', index=6,
+      number=7, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -609,8 +615,8 @@ _ASSAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1003,
-  serialized_end=1126,
+  serialized_start=1004,
+  serialized_end=1148,
 )
 
 
@@ -710,8 +716,8 @@ _FDAAPPROVAL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1129,
-  serialized_end=1402,
+  serialized_start=1151,
+  serialized_end=1424,
 )
 
 
@@ -748,8 +754,8 @@ _DOSERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1404,
-  serialized_end=1450,
+  serialized_start=1426,
+  serialized_end=1472,
 )
 
 
@@ -794,8 +800,8 @@ _RESPONSESUMMARY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1453,
-  serialized_end=1664,
+  serialized_start=1475,
+  serialized_end=1686,
 )
 
 
@@ -832,8 +838,8 @@ _COMPOUNDELEMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1666,
-  serialized_end=1716,
+  serialized_start=1688,
+  serialized_end=1738,
 )
 
 
@@ -920,8 +926,60 @@ _RESPONSECURVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1719,
-  serialized_end=2050,
+  serialized_start=1741,
+  serialized_end=2072,
+)
+
+
+_ASSAYDATA = _descriptor.Descriptor(
+  name='AssayData',
+  full_name='bmeg.AssayData',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='assay_id', full_name='bmeg.AssayData.assay_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='compound_id', full_name='bmeg.AssayData.compound_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='active', full_name='bmeg.AssayData.active', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='comment', full_name='bmeg.AssayData.comment', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2074,
+  serialized_end=2157,
 )
 
 _PREDICTOR_BACKGROUNDENTRY.containing_type = _PREDICTOR
@@ -947,6 +1005,8 @@ DESCRIPTOR.message_types_by_name['DoseResponse'] = _DOSERESPONSE
 DESCRIPTOR.message_types_by_name['ResponseSummary'] = _RESPONSESUMMARY
 DESCRIPTOR.message_types_by_name['CompoundElement'] = _COMPOUNDELEMENT
 DESCRIPTOR.message_types_by_name['ResponseCurve'] = _RESPONSECURVE
+DESCRIPTOR.message_types_by_name['AssayData'] = _ASSAYDATA
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Predictor = _reflection.GeneratedProtocolMessageType('Predictor', (_message.Message,), dict(
 
@@ -1032,6 +1092,13 @@ ResponseCurve = _reflection.GeneratedProtocolMessageType('ResponseCurve', (_mess
   # @@protoc_insertion_point(class_scope:bmeg.ResponseCurve)
   ))
 _sym_db.RegisterMessage(ResponseCurve)
+
+AssayData = _reflection.GeneratedProtocolMessageType('AssayData', (_message.Message,), dict(
+  DESCRIPTOR = _ASSAYDATA,
+  __module__ = 'phenotype_pb2'
+  # @@protoc_insertion_point(class_scope:bmeg.AssayData)
+  ))
+_sym_db.RegisterMessage(AssayData)
 
 
 _PREDICTOR_BACKGROUNDENTRY.has_options = True
