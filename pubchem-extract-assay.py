@@ -51,17 +51,18 @@ def process_bioassay_file(gzip_file, handles, annotations, sid2aid):
     tcols = {}
     drCols = {}
     acCol = None
-    for i in assay['results']:
-        tid = i['tid']
-        if 'tc' in i and 'dr_id' in i['tc']:
-            dr_id = i['tc']['dr_id']
-            if tid not in drCols:
-                drCols[tid] = {}
-            drCols[tid] = (dr_id, i['tc']['concentration'])
-        else:
-            tcols[i['tid']] = i["name"]
-        if 'ac' in i and i['ac']:
-            acCol = tid
+    if 'results' in assay:
+        for i in assay['results']:
+            tid = i['tid']
+            if 'tc' in i and 'dr_id' in i['tc']:
+                dr_id = i['tc']['dr_id']
+                if tid not in drCols:
+                    drCols[tid] = {}
+                drCols[tid] = (dr_id, i['tc']['concentration'])
+            else:
+                tcols[i['tid']] = i["name"]
+            if 'ac' in i and i['ac']:
+                acCol = tid
         
     for entry in data:
         adout = AssayData()
