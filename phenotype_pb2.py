@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='phenotype.proto',
   package='bmeg',
   syntax='proto3',
-  serialized_pb=_b('\n\x0fphenotype.proto\x12\x04\x62meg\x1a\x1ega4gh/genotype_phenotype.proto\"\xa2\x02\n\tPredictor\x12\n\n\x02id\x18\x01 \x01(\t\x12+\n\tphenotype\x18\x03 \x01(\x0b\x32\x18.ga4gh.PhenotypeInstance\x12\x10\n\x08genotype\x18\x04 \x01(\t\x12;\n\x16\x65nvironmental_contexts\x18\x05 \x03(\x0b\x32\x1b.ga4gh.EnvironmentalContext\x12\x10\n\x08model_id\x18\x06 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x07 \x01(\t\x12\x33\n\nbackground\x18\x08 \x03(\x0b\x32\x1f.bmeg.Predictor.BackgroundEntry\x1a\x31\n\x0f\x42\x61\x63kgroundEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01:\x02\x38\x01\"N\n\x14PredictorAssociation\x12\x14\n\x0cpredictor_id\x18\x01 \x01(\t\x12\x11\n\tsample_id\x18\x02 \x01(\t\x12\r\n\x05value\x18\x03 \x01(\x01\"\xd8\x01\n\x10GeneOntologyTerm\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x11\n\tnamespace\x18\x03 \x01(\t\x12\x12\n\ndefinition\x18\x04 \x01(\t\x12\x0f\n\x07\x63omment\x18\x05 \x01(\t\x12\x0f\n\x07synonym\x18\x06 \x03(\t\x12\x0c\n\x04is_a\x18\x07 \x03(\t\x12\x0e\n\x06\x61lt_id\x18\x08 \x03(\t\x12\x0e\n\x06subset\x18\t \x03(\t\x12\x0c\n\x04xref\x18\n \x03(\t\x12\x13\n\x0bis_obsolete\x18\x0b \x01(\x08\x12\x10\n\x08\x63onsider\x18\x0c \x03(\t\"o\n\x16GeneOntologyAnnotation\x12\r\n\x05title\x18\x01 \x01(\t\x12\r\n\x05genes\x18\x02 \x03(\t\x12\x11\n\tfunctions\x18\x03 \x03(\t\x12\x10\n\x08\x65vidence\x18\x04 \x03(\t\x12\x12\n\nreferences\x18\x05 \x03(\t\"\xee\x01\n\x08\x43ompound\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06target\x18\x03 \x03(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x03(\t\x12\x10\n\x08synonyms\x18\x05 \x03(\t\x12\x0e\n\x06pubmed\x18\x06 \x03(\t\x12\x0e\n\x06report\x18\x07 \x01(\t\x12\x0e\n\x06status\x18\x08 \x01(\t\x12\x11\n\trationale\x18\t \x01(\t\x12\x0e\n\x06smiles\x18\n \x01(\t\x12\x0e\n\x06\x61ssays\x18\x0b \x03(\t\x12\x0e\n\x06source\x18\x0c \x03(\t\x12\x0c\n\x04sids\x18\r \x03(\t\x12\x10\n\x08\x63hebi_id\x18\x0e \x01(\t\"\x90\x01\n\x05\x41ssay\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0b\n\x03sid\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x10\n\x08\x63\x65llline\x18\x04 \x01(\t\x12\x0e\n\x06pubmed\x18\x05 \x03(\t\x12)\n\x0c\x64rugresponse\x18\x06 \x03(\x0b\x32\x13.bmeg.ResponseCurve\x12\x13\n\x0bgene_target\x18\x07 \x03(\t\"\x91\x02\n\x0b\x46\x44\x41\x41pproval\x12\x13\n\x0b\x63ompound_id\x18\x01 \x01(\t\x12\x10\n\x08\x61pproved\x18\x02 \x01(\t\x12\x15\n\rapproved_data\x18\x03 \x01(\t\x12\x0f\n\x07\x63ompany\x18\x04 \x01(\t\x12\x0f\n\x07summary\x18\x05 \x01(\t\x12\x1b\n\x13general_information\x18\x06 \x01(\t\x12\x18\n\x10\x63linical_results\x18\x07 \x01(\t\x12\x14\n\x0cside_effects\x18\x08 \x01(\t\x12\x1b\n\x13mechanism_of_action\x18\t \x01(\t\x12\x1e\n\x16\x61\x64\x64itional_information\x18\n \x01(\t\x12\x18\n\x10theraputic_areas\x18\x0b \x01(\t\".\n\x0c\x44oseResponse\x12\x0c\n\x04\x64ose\x18\x01 \x01(\x01\x12\x10\n\x08response\x18\x02 \x01(\x01\"\xd3\x01\n\x0fResponseSummary\x12/\n\x04type\x18\x01 \x01(\x0e\x32!.bmeg.ResponseSummary.SummaryType\x12\r\n\x05value\x18\x02 \x01(\x01\x12\x0c\n\x04unit\x18\x03 \x01(\t\"r\n\x0bSummaryType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x08\n\x04\x45\x43\x35\x30\x10\x01\x12\x08\n\x04IC50\x10\x02\x12\x08\n\x04LD50\x10\x03\x12\x08\n\x04GR50\x10\x04\x12\x08\n\x04\x41MAX\x10\x05\x12\x07\n\x03\x41UC\x10\x06\x12\x11\n\rACTIVITY_AREA\x10\x07\x12\x08\n\x04RMSE\x10\x08\"2\n\x0f\x43ompoundElement\x12\x10\n\x08\x63ompound\x18\x01 \x01(\t\x12\r\n\x05ratio\x18\x03 \x01(\x01\"\xcb\x02\n\rResponseCurve\x12\x0b\n\x03gid\x18\x01 \x01(\t\x12\x36\n\x0cresponseType\x18\x02 \x01(\x0e\x32 .bmeg.ResponseCurve.ResponseType\x12\"\n\x06values\x18\x03 \x03(\x0b\x32\x12.bmeg.DoseResponse\x12\x16\n\x0egrowthStandard\x18\x04 \x01(\x01\x12(\n\tcompounds\x18\x05 \x03(\x0b\x32\x15.bmeg.CompoundElement\x12\x0e\n\x06sample\x18\x06 \x01(\t\x12&\n\x07summary\x18\x07 \x03(\x0b\x32\x15.bmeg.ResponseSummary\x12\x10\n\x08\x63ontrols\x18\x08 \x03(\x01\x12\x0e\n\x06\x62lanks\x18\t \x03(\x01\"5\n\x0cResponseType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06GROWTH\x10\x01\x12\x0c\n\x08\x41\x43TIVITY\x10\x02\"S\n\tAssayData\x12\x10\n\x08\x61ssay_id\x18\x01 \x01(\t\x12\x13\n\x0b\x63ompound_id\x18\x02 \x01(\t\x12\x0e\n\x06\x61\x63tive\x18\x03 \x01(\x08\x12\x0f\n\x07\x63omment\x18\x04 \x01(\tb\x06proto3')
+  serialized_pb=_b('\n\x0fphenotype.proto\x12\x04\x62meg\x1a\x1ega4gh/genotype_phenotype.proto\"\xa2\x02\n\tPredictor\x12\n\n\x02id\x18\x01 \x01(\t\x12+\n\tphenotype\x18\x03 \x01(\x0b\x32\x18.ga4gh.PhenotypeInstance\x12\x10\n\x08genotype\x18\x04 \x01(\t\x12;\n\x16\x65nvironmental_contexts\x18\x05 \x03(\x0b\x32\x1b.ga4gh.EnvironmentalContext\x12\x10\n\x08model_id\x18\x06 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x07 \x01(\t\x12\x33\n\nbackground\x18\x08 \x03(\x0b\x32\x1f.bmeg.Predictor.BackgroundEntry\x1a\x31\n\x0f\x42\x61\x63kgroundEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01:\x02\x38\x01\"N\n\x14PredictorAssociation\x12\x14\n\x0cpredictor_id\x18\x01 \x01(\t\x12\x11\n\tsample_id\x18\x02 \x01(\t\x12\r\n\x05value\x18\x03 \x01(\x01\"\xd8\x01\n\x10GeneOntologyTerm\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x11\n\tnamespace\x18\x03 \x01(\t\x12\x12\n\ndefinition\x18\x04 \x01(\t\x12\x0f\n\x07\x63omment\x18\x05 \x01(\t\x12\x0f\n\x07synonym\x18\x06 \x03(\t\x12\x0c\n\x04is_a\x18\x07 \x03(\t\x12\x0e\n\x06\x61lt_id\x18\x08 \x03(\t\x12\x0e\n\x06subset\x18\t \x03(\t\x12\x0c\n\x04xref\x18\n \x03(\t\x12\x13\n\x0bis_obsolete\x18\x0b \x01(\x08\x12\x10\n\x08\x63onsider\x18\x0c \x03(\t\"o\n\x16GeneOntologyAnnotation\x12\r\n\x05title\x18\x01 \x01(\t\x12\r\n\x05genes\x18\x02 \x03(\t\x12\x11\n\tfunctions\x18\x03 \x03(\t\x12\x10\n\x08\x65vidence\x18\x04 \x03(\t\x12\x12\n\nreferences\x18\x05 \x03(\t\"\xee\x01\n\x08\x43ompound\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06target\x18\x03 \x03(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x03(\t\x12\x10\n\x08synonyms\x18\x05 \x03(\t\x12\x0e\n\x06pubmed\x18\x06 \x03(\t\x12\x0e\n\x06report\x18\x07 \x01(\t\x12\x0e\n\x06status\x18\x08 \x01(\t\x12\x11\n\trationale\x18\t \x01(\t\x12\x0e\n\x06smiles\x18\n \x01(\t\x12\x0e\n\x06\x61ssays\x18\x0b \x03(\t\x12\x0e\n\x06source\x18\x0c \x03(\t\x12\x0c\n\x04sids\x18\r \x03(\t\x12\x10\n\x08\x63hebi_id\x18\x0e \x01(\t\"\x90\x01\n\x05\x41ssay\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0b\n\x03sid\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x10\n\x08\x63\x65llline\x18\x04 \x01(\t\x12\x0e\n\x06pubmed\x18\x05 \x03(\t\x12)\n\x0c\x64rugresponse\x18\x06 \x03(\x0b\x32\x13.bmeg.ResponseCurve\x12\x13\n\x0bgene_target\x18\x07 \x03(\t\"\x91\x02\n\x0b\x46\x44\x41\x41pproval\x12\x13\n\x0b\x63ompound_id\x18\x01 \x01(\t\x12\x10\n\x08\x61pproved\x18\x02 \x01(\t\x12\x15\n\rapproved_data\x18\x03 \x01(\t\x12\x0f\n\x07\x63ompany\x18\x04 \x01(\t\x12\x0f\n\x07summary\x18\x05 \x01(\t\x12\x1b\n\x13general_information\x18\x06 \x01(\t\x12\x18\n\x10\x63linical_results\x18\x07 \x01(\t\x12\x14\n\x0cside_effects\x18\x08 \x01(\t\x12\x1b\n\x13mechanism_of_action\x18\t \x01(\t\x12\x1e\n\x16\x61\x64\x64itional_information\x18\n \x01(\t\x12\x18\n\x10theraputic_areas\x18\x0b \x01(\t\".\n\x0c\x44oseResponse\x12\x0c\n\x04\x64ose\x18\x01 \x01(\x01\x12\x10\n\x08response\x18\x02 \x01(\x01\"\xdd\x01\n\x0fResponseSummary\x12/\n\x04type\x18\x01 \x01(\x0e\x32!.bmeg.ResponseSummary.SummaryType\x12\r\n\x05value\x18\x02 \x01(\x01\x12\x0c\n\x04unit\x18\x03 \x01(\t\"|\n\x0bSummaryType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x08\n\x04\x45\x43\x35\x30\x10\x01\x12\x08\n\x04IC50\x10\x02\x12\x08\n\x04\x41\x43\x35\x30\x10\x03\x12\x08\n\x04LD50\x10\x04\x12\x08\n\x04GR50\x10\x05\x12\x08\n\x04\x41MAX\x10\x06\x12\x07\n\x03\x41UC\x10\x07\x12\x11\n\rACTIVITY_AREA\x10\x08\x12\x08\n\x04RMSE\x10\t\"2\n\x0f\x43ompoundElement\x12\x10\n\x08\x63ompound\x18\x01 \x01(\t\x12\r\n\x05ratio\x18\x03 \x01(\x01\"\xdd\x02\n\rResponseCurve\x12\x0b\n\x03gid\x18\x01 \x01(\t\x12\x10\n\x08\x61ssay_id\x18\x02 \x01(\t\x12\x36\n\x0cresponseType\x18\x03 \x01(\x0e\x32 .bmeg.ResponseCurve.ResponseType\x12\"\n\x06values\x18\x04 \x03(\x0b\x32\x12.bmeg.DoseResponse\x12\x16\n\x0egrowthStandard\x18\x05 \x01(\x01\x12(\n\tcompounds\x18\x06 \x03(\x0b\x32\x15.bmeg.CompoundElement\x12\x0e\n\x06sample\x18\x07 \x01(\t\x12&\n\x07summary\x18\x08 \x03(\x0b\x32\x15.bmeg.ResponseSummary\x12\x10\n\x08\x63ontrols\x18\t \x03(\x01\x12\x0e\n\x06\x62lanks\x18\n \x03(\x01\"5\n\x0cResponseType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06GROWTH\x10\x01\x12\x0c\n\x08\x41\x43TIVITY\x10\x02\"\x82\x03\n\tAssayData\x12\x10\n\x08\x61ssay_id\x18\x01 \x01(\t\x12\x13\n\x0b\x63ompound_id\x18\x02 \x01(\t\x12\x0e\n\x06\x61\x63tive\x18\x03 \x01(\x08\x12\x0f\n\x07\x63omment\x18\x04 \x01(\t\x12\x32\n\nfloat_vals\x18\x05 \x03(\x0b\x32\x1e.bmeg.AssayData.FloatValsEntry\x12\x34\n\x0bstring_vals\x18\x06 \x03(\x0b\x32\x1f.bmeg.AssayData.StringValsEntry\x12.\n\x08int_vals\x18\x07 \x03(\x0b\x32\x1c.bmeg.AssayData.IntValsEntry\x1a\x30\n\x0e\x46loatValsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01:\x02\x38\x01\x1a\x31\n\x0fStringValsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a.\n\x0cIntValsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x05:\x02\x38\x01\x62\x06proto3')
   ,
   dependencies=[ga4gh_dot_genotype__phenotype__pb2.DESCRIPTOR,])
 
@@ -45,34 +45,38 @@ _RESPONSESUMMARY_SUMMARYTYPE = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='LD50', index=3, number=3,
+      name='AC50', index=3, number=3,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='GR50', index=4, number=4,
+      name='LD50', index=4, number=4,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='AMAX', index=5, number=5,
+      name='GR50', index=5, number=5,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='AUC', index=6, number=6,
+      name='AMAX', index=6, number=6,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ACTIVITY_AREA', index=7, number=7,
+      name='AUC', index=7, number=7,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='RMSE', index=8, number=8,
+      name='ACTIVITY_AREA', index=8, number=8,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RMSE', index=9, number=9,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=1572,
-  serialized_end=1686,
+  serialized_end=1696,
 )
 _sym_db.RegisterEnumDescriptor(_RESPONSESUMMARY_SUMMARYTYPE)
 
@@ -97,8 +101,8 @@ _RESPONSECURVE_RESPONSETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2019,
-  serialized_end=2072,
+  serialized_start=2047,
+  serialized_end=2100,
 )
 _sym_db.RegisterEnumDescriptor(_RESPONSECURVE_RESPONSETYPE)
 
@@ -801,7 +805,7 @@ _RESPONSESUMMARY = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1475,
-  serialized_end=1686,
+  serialized_end=1696,
 )
 
 
@@ -838,8 +842,8 @@ _COMPOUNDELEMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1688,
-  serialized_end=1738,
+  serialized_start=1698,
+  serialized_end=1748,
 )
 
 
@@ -858,57 +862,64 @@ _RESPONSECURVE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='responseType', full_name='bmeg.ResponseCurve.responseType', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='values', full_name='bmeg.ResponseCurve.values', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='growthStandard', full_name='bmeg.ResponseCurve.growthStandard', index=3,
-      number=4, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='compounds', full_name='bmeg.ResponseCurve.compounds', index=4,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='sample', full_name='bmeg.ResponseCurve.sample', index=5,
-      number=6, type=9, cpp_type=9, label=1,
+      name='assay_id', full_name='bmeg.ResponseCurve.assay_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='summary', full_name='bmeg.ResponseCurve.summary', index=6,
-      number=7, type=11, cpp_type=10, label=3,
+      name='responseType', full_name='bmeg.ResponseCurve.responseType', index=2,
+      number=3, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='values', full_name='bmeg.ResponseCurve.values', index=3,
+      number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='controls', full_name='bmeg.ResponseCurve.controls', index=7,
-      number=8, type=1, cpp_type=5, label=3,
+      name='growthStandard', full_name='bmeg.ResponseCurve.growthStandard', index=4,
+      number=5, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='compounds', full_name='bmeg.ResponseCurve.compounds', index=5,
+      number=6, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='blanks', full_name='bmeg.ResponseCurve.blanks', index=8,
+      name='sample', full_name='bmeg.ResponseCurve.sample', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='summary', full_name='bmeg.ResponseCurve.summary', index=7,
+      number=8, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='controls', full_name='bmeg.ResponseCurve.controls', index=8,
       number=9, type=1, cpp_type=5, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='blanks', full_name='bmeg.ResponseCurve.blanks', index=9,
+      number=10, type=1, cpp_type=5, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -926,10 +937,121 @@ _RESPONSECURVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1741,
-  serialized_end=2072,
+  serialized_start=1751,
+  serialized_end=2100,
 )
 
+
+_ASSAYDATA_FLOATVALSENTRY = _descriptor.Descriptor(
+  name='FloatValsEntry',
+  full_name='bmeg.AssayData.FloatValsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='bmeg.AssayData.FloatValsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='bmeg.AssayData.FloatValsEntry.value', index=1,
+      number=2, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2342,
+  serialized_end=2390,
+)
+
+_ASSAYDATA_STRINGVALSENTRY = _descriptor.Descriptor(
+  name='StringValsEntry',
+  full_name='bmeg.AssayData.StringValsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='bmeg.AssayData.StringValsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='bmeg.AssayData.StringValsEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2392,
+  serialized_end=2441,
+)
+
+_ASSAYDATA_INTVALSENTRY = _descriptor.Descriptor(
+  name='IntValsEntry',
+  full_name='bmeg.AssayData.IntValsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='bmeg.AssayData.IntValsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='bmeg.AssayData.IntValsEntry.value', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2443,
+  serialized_end=2489,
+)
 
 _ASSAYDATA = _descriptor.Descriptor(
   name='AssayData',
@@ -966,10 +1088,31 @@ _ASSAYDATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='float_vals', full_name='bmeg.AssayData.float_vals', index=4,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='string_vals', full_name='bmeg.AssayData.string_vals', index=5,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='int_vals', full_name='bmeg.AssayData.int_vals', index=6,
+      number=7, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[_ASSAYDATA_FLOATVALSENTRY, _ASSAYDATA_STRINGVALSENTRY, _ASSAYDATA_INTVALSENTRY, ],
   enum_types=[
   ],
   options=None,
@@ -978,8 +1121,8 @@ _ASSAYDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2074,
-  serialized_end=2157,
+  serialized_start=2103,
+  serialized_end=2489,
 )
 
 _PREDICTOR_BACKGROUNDENTRY.containing_type = _PREDICTOR
@@ -994,6 +1137,12 @@ _RESPONSECURVE.fields_by_name['values'].message_type = _DOSERESPONSE
 _RESPONSECURVE.fields_by_name['compounds'].message_type = _COMPOUNDELEMENT
 _RESPONSECURVE.fields_by_name['summary'].message_type = _RESPONSESUMMARY
 _RESPONSECURVE_RESPONSETYPE.containing_type = _RESPONSECURVE
+_ASSAYDATA_FLOATVALSENTRY.containing_type = _ASSAYDATA
+_ASSAYDATA_STRINGVALSENTRY.containing_type = _ASSAYDATA
+_ASSAYDATA_INTVALSENTRY.containing_type = _ASSAYDATA
+_ASSAYDATA.fields_by_name['float_vals'].message_type = _ASSAYDATA_FLOATVALSENTRY
+_ASSAYDATA.fields_by_name['string_vals'].message_type = _ASSAYDATA_STRINGVALSENTRY
+_ASSAYDATA.fields_by_name['int_vals'].message_type = _ASSAYDATA_INTVALSENTRY
 DESCRIPTOR.message_types_by_name['Predictor'] = _PREDICTOR
 DESCRIPTOR.message_types_by_name['PredictorAssociation'] = _PREDICTORASSOCIATION
 DESCRIPTOR.message_types_by_name['GeneOntologyTerm'] = _GENEONTOLOGYTERM
@@ -1094,13 +1243,43 @@ ResponseCurve = _reflection.GeneratedProtocolMessageType('ResponseCurve', (_mess
 _sym_db.RegisterMessage(ResponseCurve)
 
 AssayData = _reflection.GeneratedProtocolMessageType('AssayData', (_message.Message,), dict(
+
+  FloatValsEntry = _reflection.GeneratedProtocolMessageType('FloatValsEntry', (_message.Message,), dict(
+    DESCRIPTOR = _ASSAYDATA_FLOATVALSENTRY,
+    __module__ = 'phenotype_pb2'
+    # @@protoc_insertion_point(class_scope:bmeg.AssayData.FloatValsEntry)
+    ))
+  ,
+
+  StringValsEntry = _reflection.GeneratedProtocolMessageType('StringValsEntry', (_message.Message,), dict(
+    DESCRIPTOR = _ASSAYDATA_STRINGVALSENTRY,
+    __module__ = 'phenotype_pb2'
+    # @@protoc_insertion_point(class_scope:bmeg.AssayData.StringValsEntry)
+    ))
+  ,
+
+  IntValsEntry = _reflection.GeneratedProtocolMessageType('IntValsEntry', (_message.Message,), dict(
+    DESCRIPTOR = _ASSAYDATA_INTVALSENTRY,
+    __module__ = 'phenotype_pb2'
+    # @@protoc_insertion_point(class_scope:bmeg.AssayData.IntValsEntry)
+    ))
+  ,
   DESCRIPTOR = _ASSAYDATA,
   __module__ = 'phenotype_pb2'
   # @@protoc_insertion_point(class_scope:bmeg.AssayData)
   ))
 _sym_db.RegisterMessage(AssayData)
+_sym_db.RegisterMessage(AssayData.FloatValsEntry)
+_sym_db.RegisterMessage(AssayData.StringValsEntry)
+_sym_db.RegisterMessage(AssayData.IntValsEntry)
 
 
 _PREDICTOR_BACKGROUNDENTRY.has_options = True
 _PREDICTOR_BACKGROUNDENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
+_ASSAYDATA_FLOATVALSENTRY.has_options = True
+_ASSAYDATA_FLOATVALSENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
+_ASSAYDATA_STRINGVALSENTRY.has_options = True
+_ASSAYDATA_STRINGVALSENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
+_ASSAYDATA_INTVALSENTRY.has_options = True
+_ASSAYDATA_INTVALSENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
 # @@protoc_insertion_point(module_scope)
