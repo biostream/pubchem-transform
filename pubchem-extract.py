@@ -8,6 +8,10 @@ from phenotype_pb2 import Compound, Assay, ResponseCurve
 from urllib2 import urlopen
 from urllib import quote
 from google.protobuf import json_format
+import csv
+import sys
+
+
 #from zeep import Client
 
 def message_to_json(message, indent=None):
@@ -29,6 +33,7 @@ ASSAY_RECORD = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/assay/aid/%s/record/JS
 DOSE_RESPONSE = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/assay/aid/%s/doseresponse/JSON"
 
 SID2CID = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/substance/sid/%s/cids/JSON"
+
 
 def run_search(args):
     u = NAME_CID % (quote(args.name))
@@ -56,11 +61,11 @@ def run_compound_extract(args):
     print record_txt
     """
 
-    compound_handle = open(args.out, "w")
+    compound_handle = open(args.out, "a+")
 
     for CID in args.ids:
         out = Compound()
-        out.id = CID
+        out.id = 'CID{}'.format(CID)
 
         record_txt = urlopen(RECORD % CID).read()
         record = json.loads(record_txt)
@@ -207,6 +212,44 @@ def run_assay_extract(args):
             print message_to_json(out)
 
 
+def run_table_xform(args):
+    """ Extract ids from mapping tables.
+        Redirect to run_compound_extract()
+        Misses create """
+    TABLES = [
+        'https://raw.githubusercontent.com/biostream/gdc-transform/master/tcga_pubchem.map',
+        'https://raw.githubusercontent.com/biostream/ctdd-transform/master/ctdd_pubchem.table',
+        'https://raw.githubusercontent.com/biostream/ccle-transform/master/ccle_pubchem.txt',
+        'https://raw.githubusercontent.com/biostream/gdsc-transform/master/gdsc_pubchem.table',
+    ]
+    for url in TABLES:
+        sys.stderr.write('run_table_xform processing {}\n'.format(url))
+        tsvin = urlopen(url)
+        tsvin = csv.reader(tsvin, delimiter='\t')
+        for row in tsvin:
+            name = row[0]
+            id = row[1]
+            # deep copy args
+            args_copy = argparse.Namespace(**vars(args))
+            args_copy.ids = [id]
+            args_copy.out = args.table_xform_out
+            try:
+                run_compound_extract(args_copy)
+            except Exception as e:
+                sys.stderr.write('  error {} {} {}\n'
+                                 .format(name, id, e))
+                # create unknown
+                out = Compound()
+                out.id = 'UNKNOWN:{}'.format(name)
+                out.name = name
+                compound_handle = open(args_copy.out, "a+")
+                compound_handle.write(message_to_json(out))
+                compound_handle.write("\n")
+                compound_handle.close()
+
+
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
@@ -225,6 +268,12 @@ if __name__ == "__main__":
     parser_assay.add_argument("--base", default="out")
     parser_assay.add_argument("ids", nargs="+")
     parser_assay.set_defaults(func=run_assay_extract)
+
+    table_xform = subparser.add_parser("table-xform")
+    table_xform.add_argument("--table_xform_out",
+                             help="json for table xform output",
+                             default="compound.json")
+    table_xform.set_defaults(func=run_table_xform)
 
     args = parser.parse_args()
     args.func(args)
